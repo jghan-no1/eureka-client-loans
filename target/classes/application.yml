@@ -20,6 +20,8 @@ spring:
 eureka:
   instance:
     preferIpAddress: true
+    lease-renewal-interval-in-seconds: 10
+    lease-expiration-duration-in-seconds: 30
   client:
     fetchRegistry: true
     registerWithEureka: true

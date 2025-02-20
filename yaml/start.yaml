@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: team6-eureka-client-loans
-        image: k8s-vga-worker1:5000/group1-team6-eureka-client-loans:v0.2
+        image: k8s-vga-worker1:5000/group1-team6-eureka-client-loans
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8090
