@@ -3,7 +3,7 @@ pipeline {
     environment {
         REGISTRY = "k8s-vga-worker1:5000"
         IMAGE_NAME = "group1-team6-eureka-client-loans"
-        IMAGE_TAG = "v1.7"
+        IMAGE_TAG = "v1.8"
         CONTAINER_NAME = "team6-eureka-client-loans"
         NAMESPACE = "group1-team6"
         JAVA_HOME = "/usr/local/java21"
@@ -14,7 +14,7 @@ pipeline {
             steps {
                 sh 'java -version'
                 sh 'mvn -version'
-                sh "${IMAGE_NAME} ${IMAGE_TAG}"
+                sh "echo ${IMAGE_NAME} ${IMAGE_TAG}"
                 // Git 저장소에서 소스 코드 체크아웃 (branch 지정 : 본인 repository의 branch 이름으로 설정)
                 git branch: 'step4', url: 'https://github.com/jghan-no1/eureka-client-loans.git'
             }
