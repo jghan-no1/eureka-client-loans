@@ -2,6 +2,7 @@ spring:
   config:
     import: "optional:configserver:http://team6-eureka-client-config-server:8762/"
 
+
 eureka:
   client:
     serviceUrl:
