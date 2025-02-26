@@ -2,9 +2,9 @@ server:
   port: 9208
 spring:
   profiles:
-    active: "local"
+    active: "prod"
   application:
-    name: "loans"
+    name: "loans-jghan"
   datasource:
     url: jdbc:h2:mem:testdb
     driverClassName: org.h2.Driver
@@ -33,15 +33,14 @@ management:
 
 eureka:
   instance:
+    # lease-renewal-interval-in-seconds: 10
+    # lease-expiration-duration-in-seconds: 30
     preferIpAddress: true
-    lease-renewal-interval-in-seconds: 10
-    lease-expiration-duration-in-seconds: 30
-    hostname: ${HOSTNAME}
+    # hostname: ${HOSTNAME}
   client:
     fetchRegistry: true
     registerWithEureka: true
     serviceUrl:
-      # defaultZone: http://eureka-server:8761/eureka/
       defaultZone: http://team6-eureka-server:8761/eureka/
 
 info:
