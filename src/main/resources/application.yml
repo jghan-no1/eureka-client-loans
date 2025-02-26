@@ -1,6 +1,9 @@
+build:
+  version: 1.0.0
+
 server:
   port: 9208
-  
+
 spring:
   profiles:
     active: "prod"
